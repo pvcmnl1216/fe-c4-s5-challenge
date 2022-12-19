@@ -1,0 +1,36 @@
+<div id="h1" class="bg-primary">
+    <strong >Keep Note</strong>
+    <span >
+        <a routerLink="/home"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon><small class="text-primary">_</small></a>
+        
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="apps"></mat-icon><small class="text-primary">_</small>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="settings"></mat-icon>
+    </span>
+    
+    </div>
+
+
+<mat-card  class="card-content"> 
+    <mat-card-content>
+        <form id="edit-form">
+            <mat-form-field class="input-field" appearance="fill">
+                <mat-label>Title</mat-label>
+                <input matInput [(ngModel)]="note.title" name="title" type="text" >
+            </mat-form-field>
+            <br>
+            <mat-form-field class="input-field" >
+                <mat-label>Content</mat-label>
+
+                <input matInput [(ngModel)]="note.content" name="content" type="text" >
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button color="primary" (click)="editNote()">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button color="accent"  (click)=" deleteNote()">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </mat-card-actions>
+</mat-card>

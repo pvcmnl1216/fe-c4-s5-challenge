@@ -1,0 +1,14 @@
+<mat-toolbar id="header" color="primary">
+    <h1>Keep-Notes</h1>
+</mat-toolbar>
+<div id="login-form">
+    <h3>Enter Security Code for Edit And Delete Notes</h3>
+    <mat-form-field appearance="fill">
+        <mat-label>Enter Security Code!</mat-label>
+        <input matInput name="securityCode" 
+        [(ngModel)]="securityCode"
+        placeholder="securityCode">
+    </mat-form-field>
+    <button mat-button color="primary" (click)="validateTourGuideCode()">Submit</button>
+    <h3><a routerLink="">Click here Back to Home</a></h3>
+</div>
